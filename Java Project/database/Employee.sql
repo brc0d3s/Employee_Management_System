@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 25, 2023 at 09:07 PM
+-- Generation Time: Mar 26, 2023 at 01:47 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -40,7 +40,10 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`username`, `name`, `password`, `sec_q`, `sec_ans`) VALUES
-('blockchains', 'blockchains', 'blockchains', 'Your NickName?', 'web3');
+('blockchains', 'blockchains', 'blockchains', 'Your NickName?', 'web3'),
+('brc0d3s', 'brian', '9vg2020#', 'Your NickName?', 'brc0d3s'),
+('blockchains', 'blockchains', 'blockchains', 'Your NickName?', 'web3'),
+('brc0d3s', 'brian', '9vg2020#', 'Your NickName?', 'brc0d3s');
 
 -- --------------------------------------------------------
 
@@ -69,7 +72,10 @@ CREATE TABLE `employee` (
 INSERT INTO `employee` (`fname`, `lname`, `age`, `dob`, `address`, `phone`, `email`, `education`, `post`, `ID_no`, `emp_id`) VALUES
 ('Allan', 'Kibet', 20, '2021-09-23', 'Kapsabet', 723654789, 'allan@gmail.com', 'B.tech', 'programer', '789654123654', 101),
 ('Karl', 'Kipkirui', 19, '2002-05-15', 'Bomet', 1236547895, 'karl@gmail.com', 'IT', 'HR', '456987123654', 102),
-('brian', 'omondi', 21, '2021-09-29', 'Sagana', 770872383, 'brc0d3s@gmail.com', 'Comp Science', 'CEO', '3555466', 103);
+('Brian', 'Omondi', 21, '2021-09-29', 'Sagana', 770872383, 'brc0d3s@gmail.com', 'BS Comp Sci', 'CEO', '3555466', 103),
+('Emanuel', 'Koituk', 20, '2002-03-30', 'kericho', 787564323, 'koituk@gmail.com', 'BS Acturial Sci', 'Sys Analyst', '104538839', 104),
+('Angela', 'Mwende', 19, '2003-09-23', '123, kitui', 798653421, 'amwende@gmail.com', 'BS Comp Sci', 'Programmer', '4567876', 105),
+('Peter', 'Nyando', 22, '2022-11-23', 'Ugunja', 789654323, 'pt@gmail.com', 'BS Comp Sci', 'Clerk', '192635', 106);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
