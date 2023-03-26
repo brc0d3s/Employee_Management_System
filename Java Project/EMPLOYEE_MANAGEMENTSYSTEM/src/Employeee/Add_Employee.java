@@ -1,17 +1,19 @@
 package Employeee;
 
-import java.sql.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 class Add_Employee implements ActionListener{
-
     JFrame f;
     JLabel id,id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12,id15,id16,id17,lab,lab1;
     JTextField t,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13;
     JButton b,b1,b2,b3;
+    JComboBox j9;
+
 
     Add_Employee(int i){}
     
@@ -61,14 +63,18 @@ class Add_Employee implements ActionListener{
         t3.setBounds(200,200,150,30);
         id15.add(t3);
 
-        id4= new JLabel("DOB (yyyy-mm-dd)");  
+        id4= new JLabel("DOB (yyyy-mm-dd)");
         id4.setBounds(400,200,200,30);
         id4.setFont(new Font("serif",Font.BOLD,20));
         id15.add(id4);
 
+
+
         t4=new JTextField();
         t4.setBounds(600,200,150,30);
         id15.add(t4);
+
+        
 
         id5= new JLabel("Address");
         id5.setBounds(50,250,100,30);
@@ -102,9 +108,13 @@ class Add_Employee implements ActionListener{
         id9.setFont(new Font("serif",Font.BOLD,20));    
         id15.add(id9);
 
-        t8=new JTextField();
-        t8.setBounds(600,300,150,30);
-        id15.add(t8);
+        String courses[] = {"BS Comp Sci","BTech", "IT","BS Acturial Sci", "B COM","Software Eng.",""};
+        j9= new JComboBox(courses);
+        j9.setBackground(Color.WHITE);
+        j9.setBounds(600, 300, 150, 30);
+        id15.add(j9);
+
+
 
         id10= new JLabel("Job Post");
         id10.setBounds(50,350,100,30);
@@ -130,15 +140,15 @@ class Add_Employee implements ActionListener{
         id12.setFont(new Font("serif",Font.BOLD,20));
         id15.add(id12);
 
-        t11=new JTextField();   
+        t11=new JTextField();
         t11.setBounds(200,400,150,30);
         id15.add(t11);
 
-        
+
 
         lab=new JLabel();
         lab.setBounds(200,450,250,200);
-	id15.add(lab);
+        id15.add(lab);
 
         lab1=new JLabel("");
         lab1.setBounds(600,450,250,200);
@@ -148,34 +158,34 @@ class Add_Employee implements ActionListener{
         b.setBackground(Color.BLACK);
         b.setForeground(Color.WHITE);
         b.setBounds(250,550,150,40);
-        
+
         id15.add(b);
 
-        b1=new JButton("Cancel");   
+        b1=new JButton("Cancel");
         b1.setBackground(Color.BLACK);
         b1.setForeground(Color.WHITE);
         b1.setBounds(450,550,150,40);
-        
+
         id15.add(b1);
-        
+
         b.addActionListener(this);
         b1.addActionListener(this);
-        
+
         f.setVisible(true);
         f.setSize(900,700);
         f.setLocation(300,100);
     }
 
     public void actionPerformed(ActionEvent ae){
-        
+
         String a = t1.getText();
         String bb = t2.getText();
         String c = t3.getText();
-        String d = t4.getText();
+        String d=t4.getText();
         String e = t5.getText();
         String ff = t6.getText();
         String g = t7.getText();
-        String h = t8.getText();
+        String h = j9.getSelectedItem().toString();
         String i = t9.getText();
         String j = t10.getText();
         String k = t11.getText();
