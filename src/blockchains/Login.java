@@ -16,7 +16,7 @@ public class Login extends JFrame implements ActionListener {
     JLabel l, l1,l2,l3,l4;
     JButton b,b1;
 
-   Login() {
+   public Login() {
         setTitle("Login");
         setBackground(Color.blue);
         setLayout(null);
