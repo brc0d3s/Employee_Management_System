@@ -15,8 +15,7 @@ public class conn {
     public conn() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/java", "root", "");
-            // if you change your xampp port then change here & username and password match here . 
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/blockchain", "root", "9vg2020#");
             s = c.createStatement();
         } catch (Exception e) {
             e.printStackTrace();
